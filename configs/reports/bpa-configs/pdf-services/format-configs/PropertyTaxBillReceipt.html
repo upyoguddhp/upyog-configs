@@ -160,11 +160,14 @@
         <td><strong>Father's/Husband's Name:</strong></td>
         <td><span th:text="${fatherOrHusbandName}">NA</span></td>
       </tr>
-      <tr>
+      <!--<tr>
         <td><strong>No. of Stories:</strong></td>
         <td><span th:text="${noOfStories}">NA</span></td>
+      </tr>-->
+      <tr>
+        <td><strong>Building No:</strong></td>
+        <td><span th:text="${buildingNo}">NA</span></td>
       </tr>
-      
     </table>
   </div>
 
@@ -180,6 +183,7 @@
 					<th>F3</th>
 					<th>F4</th>
 					<th>F5</th>
+					<th>Floor No</th>
 					<th>Plinth Area</th>
 				</tr>
 			</thead>
@@ -194,6 +198,7 @@
 					<td><span th:text="f3">NA</span></td>
 					<td><span th:text="f4">NA</span></td>
 					<td><span th:text="f5">NA</span></td>
+					<td><span th:text="floorNo">NA</span></td>
 					<td><span th:text="plinthArea">NA</span></td>
 				</tr>
 				<tr style="display:none">
@@ -201,7 +206,7 @@
 				</tr>
 			</tbody>
 			<tr>
-				<td colspan="6" class="bold">Total</td>
+				<td colspan="7" class="bold">Total</td>
 				<td style="text-align: center;"><span th:text="${plinthAreaTotal}">NA</span></td>
 			</tr>
 		</table>
@@ -257,9 +262,7 @@
 
   <!-- Disclaimer -->
   <div class="section">
-    <em>Disclaimer:</em>
-	<em>A 10% rebate is available if paid within 15 days</em>
-	<em>Payment of Property Tax does not legalize unauthorized properties</em>
+    <em>Disclaimer: Property Tax payment does not legalize unauthorized properties.</em>
   </div>
 
   <!-- Auto-print -->
