@@ -327,10 +327,6 @@
                            <td><span th:text="${ownerOrOccupier}">NA</span></td>
                         </tr>
                         <tr>
-                           <th>Owner’s Father/Husband Name</th>
-                           <td><span th:text="${fatherOrHusbandName}">NA</span></td>
-                        </tr>
-                        <tr>
                            <th>Customer ID</th>
                            <td><span th:text="${customerId}">NA</span></td>
                         </tr>
@@ -415,13 +411,16 @@
             </table>
          </div>
          <div class="footer">
-            <ul class="footer-list">
+            <ul class="">
                <li class="highlight">
                   <strong>
                   The generated bill will be expired after 
                   <span th:text="${billDueDate}"> NA </span>.
                   </strong>
                </li>
+			   </ul>
+			   <ul class="footer-list">
+				
                <li>This receipt has been generated electronically and does not require a physical signature. | Generated on 
                   <span th:text="${#dates.format(#dates.createNow(), 'dd.MM.yyyy')}"></span>
                </li>
