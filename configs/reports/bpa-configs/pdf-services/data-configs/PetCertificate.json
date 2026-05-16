@@ -90,6 +90,12 @@
              "value":{
                "path":"$.ulbName"
              }
+           },
+           {
+            "variable":"modifiedTime",
+             "value":{
+               "path":"$.modifiedTime"
+             }
            }
         ]
       }
