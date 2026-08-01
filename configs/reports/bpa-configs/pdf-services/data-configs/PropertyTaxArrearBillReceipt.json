@@ -66,7 +66,6 @@
               "path": "$.mobileNumber"
             }
           },
-
           {
             "variable": "address",
             "value": {
@@ -163,6 +162,18 @@
               "path": "$.amountPaid"
             }
           },
+		  {
+		  	"variable": "advancePaid",
+		  	"value": {
+		  	  "path": "$.advancePaid"
+		  	}
+		  },
+          {
+            "variable": "amountDue",
+            "value": {
+              "path": "$.amountDue"
+            }
+          },
           {
             "variable": "paymentStatus",
             "value": {
@@ -182,6 +193,26 @@
             }
           }
         ]
+      },
+      {
+        "table": {
+          "name": "ARREAR_BILL_TABLE_ROW",
+          "rowDataPath": "$.TABLE_ROW[?(@.tag=='ARREAR_BILL_TABLE_ROW')].values[*]",
+          "columnMappings": [
+            {
+              "header": "slNo",
+              "value": "slNo"
+            },
+            {
+              "header": "financialYear",
+              "value": "financialYear"
+            },
+            {
+              "header": "totalTax",
+              "value": "totalTax"
+            }
+          ]
+        }
       }
     ]
   }
